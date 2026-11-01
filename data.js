@@ -3,6 +3,204 @@
 // group: video / post / print
 window.COLLECTIONS = [
  {
+  "id": "brand-huawei",
+  "group": "brand",
+  "title": "รู้จักแบรนด์ Huawei",
+  "date": "1 พ.ย. 2569",
+  "status": "review",
+  "desc": "ผู้ผลิตอินเวอร์เตอร์อันดับต้นของโลก: ประวัติ เทคโนโลยี String Inverter อัจฉริยะ ผลิตภัณฑ์ SUN2000 / LUNA2000 / Optimizer และเหมาะกับใคร",
+  "captions": [
+   {
+    "label": "FACEBOOK",
+    "text": "รู้จักแบรนด์ Huawei ผู้ผลิตอินเวอร์เตอร์อันดับต้นของโลก 🌏\n\n🏢 ก่อตั้งปี 1987 ที่เซินเจิ้น ประเทศจีน เริ่มจากธุรกิจโทรคมนาคม ก่อนขยายสู่ธุรกิจพลังงานในชื่อ Huawei Digital Power\n🏆 อันดับ 1 การจัดอันดับผู้ผลิตอินเวอร์เตอร์โลกของ Wood Mackenzie (ครึ่งแรกปี 2025)\n\nเทคโนโลยีเด่น\n• String Inverter อัจฉริยะ ดูแลทั้งระบบด้วยเครื่องเดียว\n• AFCI ตัดไฟอาร์คอัตโนมัติภายใน 0.5 วินาที\n• Smart PV Optimizer ดึงผลผลิตรายแผง ลดผลกระทบจากเงา\n• ดูข้อมูลผ่านแอป FusionSolar\n\nผลิตภัณฑ์: อินเวอร์เตอร์ SUN2000 · แบตเตอรี่ LUNA2000 · Smart PV Optimizer\nเหมาะกับ: บ้านหลังคาโล่งหันทิศเดียว เน้นคุ้มค่า และอาคาร โรงเรียน โรงงาน\n\nTNS ติดตั้งระบบ Huawei มาแล้วหลายโครงการ เช่น รร.เทศบาลเมืองบางกะดี 150 kW\n\nทักมาปรึกษาทีม TNS Solar ได้เลยครับ\n\nLINE: @tnssolar\nโทร (แยกตามพื้นที่ติดตั้ง)\n• 081 796 4999 — กรุงเทพฯ นนทบุรี สมุทรปราการ (กฟน.)\n• 065 295 5998 — ชลบุรี ภาคกลาง ภาคตะวันออกเฉียงเหนือ (กฟภ.)\n• 087 304 3724 — เชียงใหม่ ภาคเหนือ (กฟภ.)\nเว็บไซต์: www.tnsnetwork.co.th\nสาขา: เชียงใหม่ | ชลบุรี | สงขลา\n\n#Huawei #HuaweiSolar #FusionSolar #โซลาร์เซลล์ #TNSSolar #ติดโซลาร์เซลล์"
+   },
+   {
+    "label": "TIKTOK",
+    "text": "รู้จัก Huawei ผู้ผลิตอินเวอร์เตอร์อันดับต้นของโลก String Inverter อัจฉริยะ + AFCI + แอป FusionSolar เหมาะกับบ้านหลังคาโล่งและอาคารขนาดใหญ่ ปรึกษา TNS ทักไลน์ @tnssolar\n#Huawei #HuaweiSolar #FusionSolar #โซลาร์เซลล์ #TNSSolar"
+   }
+  ],
+  "items": [
+   {
+    "title": "คลิป รู้จักแบรนด์ Huawei",
+    "video": "v/v01.mp4",
+    "poster": "p/v01.jpg",
+    "ratio": "9/16",
+    "file": "TNS-Brand_EP01_Huawei_VO.mp4",
+    "k": "n01",
+    "label": "01"
+   },
+   {
+    "title": "ภาพ 1/4 · ประวัติแบรนด์",
+    "img": "i/n01.jpg",
+    "thumb": "t/n01.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP01_Huawei_1-ประวัติ_4x5_v1.jpg",
+    "k": "n02",
+    "label": "02"
+   },
+   {
+    "title": "ภาพ 2/4 · เทคโนโลยีเด่น",
+    "img": "i/n02.jpg",
+    "thumb": "t/n02.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP01_Huawei_2-เทคโนโลยี_4x5_v1.jpg",
+    "k": "n03",
+    "label": "03"
+   },
+   {
+    "title": "ภาพ 3/4 · ผลิตภัณฑ์หลัก",
+    "img": "i/n03.jpg",
+    "thumb": "t/n03.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP01_Huawei_3-ผลิตภัณฑ์_4x5_v1.jpg",
+    "k": "n04",
+    "label": "04"
+   },
+   {
+    "title": "ภาพ 4/4 · เหมาะกับใคร?",
+    "img": "i/n04.jpg",
+    "thumb": "t/n04.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP01_Huawei_4-เหมาะกับใคร_4x5_v1.jpg",
+    "k": "n05",
+    "label": "05"
+   }
+  ],
+  "base": "c/brand-huawei/"
+ },
+ {
+  "id": "brand-enphase",
+  "group": "brand",
+  "title": "รู้จักแบรนด์ Enphase",
+  "date": "1 พ.ย. 2569",
+  "status": "review",
+  "desc": "ผู้บุกเบิก Micro Inverter จากสหรัฐฯ: ประวัติ เทคโนโลยี Micro Inverter ทุกแผง ผลิตภัณฑ์ IQ8 / IQ Battery และเหมาะกับใคร",
+  "captions": [
+   {
+    "label": "FACEBOOK",
+    "text": "รู้จักแบรนด์ Enphase ผู้บุกเบิก Micro Inverter จากสหรัฐอเมริกา 🇺🇸\n\n🏢 ก่อตั้งปี 2006 ที่แคลิฟอร์เนีย เปิดตัว Micro Inverter รุ่นแรกปี 2008 และเข้าตลาดหุ้น NASDAQ ปี 2012\n📦 ส่งมอบ Micro Inverter สะสมกว่า 86 ล้านตัว ใช้งานในกว่า 160 ประเทศ (ข้อมูล ณ สิ้นปี 2025)\n\nเทคโนโลยีเด่น\n• Micro Inverter 1 ตัว ต่อ 1 แผง แต่ละแผงทำงานอิสระ\n• ไม่มีไฟ DC แรงดันสูงบนหลังคา ปลอดภัยสูง\n• IQ8 Micro Inverter ที่สร้างไมโครกริดได้รุ่นแรก\n• ดูข้อมูลรายแผงผ่าน Enphase App\n\nผลิตภัณฑ์: IQ8 Series (เช่น IQ8P) · IQ Battery · IQ Gateway\nเหมาะกับ: หลังคาหลายทิศ มีเงาบัง เน้นความปลอดภัย และอยากขยายระบบภายหลัง\n\nรับประกัน Micro Inverter สูงสุด 25 ปี เมื่อติดตั้งกับ TNS\n\nทักมาปรึกษาทีม TNS Solar ได้เลยครับ\n\nLINE: @tnssolar\nโทร (แยกตามพื้นที่ติดตั้ง)\n• 081 796 4999 — กรุงเทพฯ นนทบุรี สมุทรปราการ (กฟน.)\n• 065 295 5998 — ชลบุรี ภาคกลาง ภาคตะวันออกเฉียงเหนือ (กฟภ.)\n• 087 304 3724 — เชียงใหม่ ภาคเหนือ (กฟภ.)\nเว็บไซต์: www.tnsnetwork.co.th\nสาขา: เชียงใหม่ | ชลบุรี | สงขลา\n\n#Enphase #MicroInverter #IQ8 #โซลาร์เซลล์ #TNSSolar #ติดโซลาร์เซลล์"
+   },
+   {
+    "label": "TIKTOK",
+    "text": "รู้จัก Enphase ผู้บุกเบิก Micro Inverter ส่งมอบแล้วกว่า 86 ล้านตัว 1 ตัวต่อ 1 แผง ปลอดภัย ดูข้อมูลรายแผง เหมาะกับหลังคาหลายทิศหรือมีเงา ปรึกษา TNS ทักไลน์ @tnssolar\n#Enphase #MicroInverter #IQ8 #โซลาร์เซลล์ #TNSSolar"
+   }
+  ],
+  "items": [
+   {
+    "title": "คลิป รู้จักแบรนด์ Enphase",
+    "video": "v/v01.mp4",
+    "poster": "p/v01.jpg",
+    "ratio": "9/16",
+    "file": "TNS-Brand_EP02_Enphase_VO.mp4",
+    "k": "n01",
+    "label": "01"
+   },
+   {
+    "title": "ภาพ 1/4 · ประวัติแบรนด์",
+    "img": "i/n01.jpg",
+    "thumb": "t/n01.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP02_Enphase_1-ประวัติ_4x5_v1.jpg",
+    "k": "n02",
+    "label": "02"
+   },
+   {
+    "title": "ภาพ 2/4 · เทคโนโลยีเด่น",
+    "img": "i/n02.jpg",
+    "thumb": "t/n02.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP02_Enphase_2-เทคโนโลยี_4x5_v1.jpg",
+    "k": "n03",
+    "label": "03"
+   },
+   {
+    "title": "ภาพ 3/4 · ผลิตภัณฑ์หลัก",
+    "img": "i/n03.jpg",
+    "thumb": "t/n03.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP02_Enphase_3-ผลิตภัณฑ์_4x5_v1.jpg",
+    "k": "n04",
+    "label": "04"
+   },
+   {
+    "title": "ภาพ 4/4 · เหมาะกับใคร?",
+    "img": "i/n04.jpg",
+    "thumb": "t/n04.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP02_Enphase_4-เหมาะกับใคร_4x5_v1.jpg",
+    "k": "n05",
+    "label": "05"
+   }
+  ],
+  "base": "c/brand-enphase/"
+ },
+ {
+  "id": "brand-atmoce",
+  "group": "brand",
+  "title": "รู้จักแบรนด์ Atmoce",
+  "date": "1 พ.ย. 2569",
+  "status": "review",
+  "desc": "Micro Inverter 2-in-1 จากยุโรป: ประวัติ เทคโนโลยี ผลิตภัณฑ์ MI-1250 / MI-500 / แบตเตอรี่ และเหมาะกับใคร",
+  "captions": [
+   {
+    "label": "FACEBOOK",
+    "text": "รู้จักแบรนด์ Atmoce Micro Inverter 2-in-1 จากยุโรป 🇪🇺\n\n🏢 แบรนด์พลังงานสำหรับบ้าน ออกแบบอุปกรณ์แปลงไฟและเก็บพลังงาน ทำตลาดในกว่า 20 ประเทศ ทั้งยุโรปและอาเซียน\n\nเทคโนโลยีเด่น\n• Micro 2-in-1 — 1 ตัว ดูแล 2 แผง แต่ละแผงมี MPPT อิสระ\n• ไฟ DC ต่ำกว่า 60V ลดความเสี่ยงไฟอาร์ค\n• ประสิทธิภาพสูงสุด 98.2% กำลังสูงสุด 1,250 วัตต์ต่อตัว\n• กันน้ำกันฝุ่น IP67\n\nผลิตภัณฑ์: MI-1250 (2 แผง) · MI-500 (1 แผง) · แบตเตอรี่ + M Back-Up\nเหมาะกับ: บ้านที่อยากได้ระบบ Micro ในงบคุ้มค่า เน้นความปลอดภัย และอยากมีไฟสำรอง\n\nTNS ติดตั้ง Atmoce ให้ลูกค้าบ้านพักอาศัยมาแล้ว ทั้งระบบ Micro และแบตเตอรี่\n\nทักมาปรึกษาทีม TNS Solar ได้เลยครับ\n\nLINE: @tnssolar\nโทร (แยกตามพื้นที่ติดตั้ง)\n• 081 796 4999 — กรุงเทพฯ นนทบุรี สมุทรปราการ (กฟน.)\n• 065 295 5998 — ชลบุรี ภาคกลาง ภาคตะวันออกเฉียงเหนือ (กฟภ.)\n• 087 304 3724 — เชียงใหม่ ภาคเหนือ (กฟภ.)\nเว็บไซต์: www.tnsnetwork.co.th\nสาขา: เชียงใหม่ | ชลบุรี | สงขลา\n\n#Atmoce #MicroInverter #โซลาร์เซลล์ #โซลาร์รูฟท็อป #TNSSolar #ติดโซลาร์เซลล์"
+   },
+   {
+    "label": "TIKTOK",
+    "text": "รู้จัก Atmoce Micro Inverter 2-in-1 จากยุโรป 1 ตัวดูแล 2 แผง ไฟ DC ต่ำกว่า 60V ประสิทธิภาพสูงสุด 98.2% เพิ่มแบตเตอรี่ได้ ปรึกษา TNS ทักไลน์ @tnssolar\n#Atmoce #MicroInverter #โซลาร์เซลล์ #โซลาร์รูฟท็อป #TNSSolar"
+   }
+  ],
+  "items": [
+   {
+    "title": "คลิป รู้จักแบรนด์ Atmoce",
+    "video": "v/v01.mp4",
+    "poster": "p/v01.jpg",
+    "ratio": "9/16",
+    "file": "TNS-Brand_EP03_Atmoce_VO.mp4",
+    "k": "n01",
+    "label": "01"
+   },
+   {
+    "title": "ภาพ 1/4 · ประวัติแบรนด์",
+    "img": "i/n01.jpg",
+    "thumb": "t/n01.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP03_Atmoce_1-ประวัติ_4x5_v1.jpg",
+    "k": "n02",
+    "label": "02"
+   },
+   {
+    "title": "ภาพ 2/4 · เทคโนโลยีเด่น",
+    "img": "i/n02.jpg",
+    "thumb": "t/n02.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP03_Atmoce_2-เทคโนโลยี_4x5_v1.jpg",
+    "k": "n03",
+    "label": "03"
+   },
+   {
+    "title": "ภาพ 3/4 · ผลิตภัณฑ์หลัก",
+    "img": "i/n03.jpg",
+    "thumb": "t/n03.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP03_Atmoce_3-ผลิตภัณฑ์_4x5_v1.jpg",
+    "k": "n04",
+    "label": "04"
+   },
+   {
+    "title": "ภาพ 4/4 · เหมาะกับใคร?",
+    "img": "i/n04.jpg",
+    "thumb": "t/n04.jpg",
+    "ratio": "1080/1350",
+    "fileImg": "TNS-Brand_EP03_Atmoce_4-เหมาะกับใคร_4x5_v1.jpg",
+    "k": "n05",
+    "label": "05"
+   }
+  ],
+  "base": "c/brand-atmoce/"
+ },
+ {
   "id": "solar20",
   "group": "video",
   "title": "รู้จริงเรื่องโซลาร์ · 20 ตอน",
