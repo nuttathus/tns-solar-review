@@ -28,7 +28,6 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 a{color:inherit}
 img,video{display:block;max-width:100%}
 
-/* header */
 .top{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#12509a 100%);color:#fff;position:relative;overflow:hidden}
 .top::after{content:"";position:absolute;right:-80px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(252,211,77,.35),rgba(252,211,77,0) 70%);pointer-events:none}
 .top-in{max-width:1180px;margin:0 auto;padding:18px 16px 26px;position:relative;z-index:1}
@@ -38,17 +37,24 @@ img,video{display:block;max-width:100%}
 .top h1{font-size:clamp(22px,4.6vw,32px);font-weight:600;margin-top:18px;line-height:1.25}
 .top p{color:rgba(255,255,255,.78);font-size:14px;margin-top:4px;font-weight:300}
 
-/* collection switcher */
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px 64px}
-.cols{display:flex;gap:10px;overflow-x:auto;padding:16px 0 4px;scrollbar-width:none}
-.cols::-webkit-scrollbar{display:none}
-.colbtn{flex:0 0 auto;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:200px}
-.colbtn b{display:block;font-weight:600;font-size:14px}
-.colbtn span{font-size:12px;color:var(--muted)}
-.colbtn[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,111,209,.14)}
 
-/* collection head */
-.chead{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:14px;display:grid;gap:10px}
+/* collection picker */
+.picker{margin-top:16px;display:grid;gap:14px}
+.grp h4{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.05em;margin:0 0 8px 2px}
+.cols{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+@media(max-width:520px){.cols{grid-template-columns:1fr 1fr}}
+.colbtn{display:flex;gap:10px;align-items:center;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;min-width:0}
+.colbtn .cv{flex:0 0 auto;width:40px;height:52px;border-radius:7px;background:#dfe7f2 center/cover no-repeat}
+.colbtn .tx{min-width:0}
+.colbtn b{display:block;font-weight:600;font-size:13px;line-height:1.3;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.colbtn span{font-size:11.5px;color:var(--muted)}
+.colbtn .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--warn);margin-right:4px;vertical-align:1px}
+.colbtn[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,111,209,.14)}
+.picker.collapsed .cols{display:none}
+.ptoggle{font-size:13px;font-weight:500;color:var(--blue);justify-self:start;padding:2px 0}
+
+.chead{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:16px;display:grid;gap:10px}
 .chead h2{font-size:20px;font-weight:600;line-height:1.3}
 .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:500}
@@ -56,32 +62,30 @@ img,video{display:block;max-width:100%}
 .pill.review{background:#fff4e0;color:var(--warn)}
 .pill.approved{background:#e6f6ec;color:var(--ok)}
 .pill.posted{background:#e8f0fb;color:var(--blue)}
+.pill.archive{background:#eef1f5;color:#64748b}
 .chead p{font-size:14px;color:var(--muted)}
+.capbtn{justify-self:start;font-size:13px;font-weight:500;color:var(--blue);background:#e8f0fb;padding:6px 14px;border-radius:9px}
 
-/* view tabs */
 .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 0 12px;flex-wrap:wrap}
 .seg{display:inline-flex;background:#e6ecf5;border-radius:12px;padding:4px}
 .seg button{padding:7px 16px;border-radius:9px;font-size:14px;font-weight:500;color:var(--muted)}
 .seg button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(15,31,56,.12)}
 .count{font-size:13px;color:var(--muted)}
 
-/* grid */
-.grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
 @media(min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media(min-width:1100px){.grid.reels{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(min-width:1100px){.grid.narrow{grid-template-columns:repeat(5,minmax(0,1fr))}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:left;transition:transform .15s,box-shadow .15s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,31,56,.1)}
 .card:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
-.thumb{position:relative;background:#dfe7f2;aspect-ratio:9/16}
-.grid.images .thumb{aspect-ratio:4/5}
+.thumb{position:relative;background:#dfe7f2}
 .thumb img{width:100%;height:100%;object-fit:cover}
 .thumb .ep{position:absolute;left:8px;top:8px;background:rgba(11,42,85,.88);color:#fff;font-size:11px;font-weight:600;padding:2px 8px;border-radius:6px;letter-spacing:.03em}
 .thumb .play{position:absolute;inset:auto 8px 8px auto;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .thumb .play svg{width:14px;height:14px;margin-left:2px;fill:var(--navy)}
 .card .t{padding:10px 12px 12px;font-size:13.5px;font-weight:500;line-height:1.35}
 
-/* modal */
 .modal{position:fixed;inset:0;background:rgba(6,18,38,.78);backdrop-filter:blur(4px);display:none;z-index:50;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .modal.open{display:block}
 .sheet{background:var(--bg);max-width:1100px;margin:0 auto;min-height:100%;position:relative}
@@ -95,20 +99,22 @@ img,video{display:block;max-width:100%}
 .ibtn:disabled{opacity:.35;cursor:default}
 .mbody{padding:16px;display:grid;gap:16px}
 @media(min-width:900px){.mbody{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);padding:22px;gap:22px;align-items:start}}
+.mbody.solo{grid-template-columns:1fr}
 .media{display:grid;gap:12px}
-@media(min-width:560px) and (max-width:899px){.media{grid-template-columns:1fr 1fr;align-items:start}}
+@media(min-width:560px) and (max-width:899px){.media.two{grid-template-columns:1fr 1fr;align-items:start}}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .panel h3{font-size:13px;font-weight:600;color:var(--muted);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px}
 .vid{background:#000;aspect-ratio:9/16;max-height:78vh;margin:0 auto;width:100%}
 .vid video{width:100%;height:100%;object-fit:contain;background:#000}
 .panel .fname{font-size:11.5px;color:var(--muted);padding:8px 14px;word-break:break-all;border-top:1px solid var(--line)}
-.caps{display:grid;gap:16px}
+.side{display:grid;gap:16px}
 .cap pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:14px;line-height:1.65;padding:14px;max-height:520px;overflow:auto}
-.copy{font-size:12px;font-weight:500;color:var(--blue);background:#e8f0fb;padding:5px 12px;border-radius:8px}
+.copy{font-size:12px;font-weight:500;color:var(--blue);background:#e8f0fb;padding:5px 12px;border-radius:8px;flex:0 0 auto}
 .copy.done{color:var(--ok);background:#e6f6ec}
-.chips{display:flex;gap:6px;align-items:center}
-.chip{font-size:11px;font-weight:600;color:#fff;padding:2px 8px;border-radius:6px}
-.chip.fb{background:#1877f2}.chip.tt{background:#111}
+.chips{display:flex;gap:6px;align-items:center;min-width:0}
+.chip{font-size:11px;font-weight:600;color:#fff;padding:2px 8px;border-radius:6px;flex:0 0 auto}
+.chip.fb{background:#1877f2}.chip.tt{background:#111}.chip.sc{background:#7c3aed}.chip.cp{background:var(--navy-2)}
+.chips .lb{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hint{font-size:12px;color:var(--muted);text-align:center;padding:0 16px 20px}
 @media(min-width:900px){.hint{grid-column:1/-1}}
 
@@ -129,26 +135,23 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
 </header>
 
 <main class="wrap">
-  <nav class="cols" id="cols" aria-label="ชุดคอนเทนต์"></nav>
+  <nav class="picker" id="picker" aria-label="ชุดคอนเทนต์"></nav>
   <section class="chead" id="chead"></section>
   <div class="bar">
-    <div class="seg" role="group" aria-label="มุมมอง">
-      <button data-view="reels" aria-pressed="true">คลิป Reels</button>
-      <button data-view="images" aria-pressed="false">ภาพโพสต์</button>
-    </div>
+    <div class="seg" id="seg" role="group" aria-label="มุมมอง"></div>
     <span class="count" id="count"></span>
   </div>
-  <div class="grid reels" id="grid"></div>
+  <div class="grid" id="grid"></div>
 </main>
-<footer>คลิปบนเว็บเป็นไฟล์ย่อขนาด (720p) สำหรับดูตัวอย่าง · ไฟล์เต็มสำหรับโพสต์จริงอยู่ในโฟลเดอร์ TNS Solar บนเครื่อง Windows</footer>
+<footer>คลิปบนเว็บเป็นไฟล์ย่อขนาด (720p) และภาพย่อขนาดสำหรับดูตัวอย่าง · ไฟล์เต็มสำหรับโพสต์/พิมพ์จริงอยู่ในโฟลเดอร์ TNS Solar บนเครื่อง Windows</footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mttl">
   <div class="sheet">
     <div class="mhead">
       <button class="ibtn" id="mclose" aria-label="ปิด"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
       <div class="ttl" id="mttl"></div>
-      <button class="ibtn" id="mprev" aria-label="ตอนก่อนหน้า"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
-      <button class="ibtn" id="mnext" aria-label="ตอนถัดไป"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+      <button class="ibtn" id="mprev" aria-label="ก่อนหน้า"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button class="ibtn" id="mnext" aria-label="ถัดไป"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
     <div class="mbody" id="mbody"></div>
   </div>
@@ -158,69 +161,115 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
 <script>
 (function(){
   var C = window.COLLECTIONS || [];
-  var STATUS = {review:['review','รอรีวิว'], approved:['approved','อนุมัติแล้ว'], posted:['posted','โพสต์แล้ว']};
-  var state = {col: null, view: 'reels', idx: -1};
+  var STATUS = {review:'รอรีวิว', approved:'อนุมัติแล้ว', posted:'โพสต์แล้ว', archive:'คลังสื่อ'};
+  var GROUPS = [['video','วิดีโอ'],['post','โพสต์โซเชียล'],['print','โบรชัวร์ & ป้าย']];
+  var state = {col:null, view:null, list:[], idx:-1, caps:false};
   var $ = function(id){return document.getElementById(id)};
-  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-  function pad(n){return (n<10?'0':'')+n}
-  function st(s){var x=STATUS[s]||STATUS.review; return '<span class="pill '+x[0]+'">'+x[1]+'</span>'}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function st(s){s=STATUS[s]?s:'archive'; return '<span class="pill '+s+'">'+STATUS[s]+'</span>'}
+  function cover(c){var it=c.items[0]; return c.base+(it.poster||it.thumb||it.img)}
+  function nV(c){return c.items.filter(function(i){return i.video}).length}
+  function nI(c){return c.items.filter(function(i){return i.img}).length}
+  function summary(c){var a=[],v=nV(c),i=nI(c); if(v)a.push(v+' คลิป'); if(i)a.push(i+' ภาพ'); return a.join(' · ')}
 
-  function renderCols(){
-    $('cols').style.display = C.length>1 ? '' : 'none';
-    $('cols').innerHTML = C.map(function(c){
-      return '<button class="colbtn" data-col="'+c.id+'" aria-pressed="'+(state.col===c?'true':'false')+'"><b>'+esc(c.title)+'</b><span>'+esc(c.date)+' · '+c.items.length+' ชิ้น</span></button>';
+  function renderPicker(){
+    var p=$('picker');
+    var html=GROUPS.map(function(g){
+      var cs=C.filter(function(c){return (c.group||'post')===g[0]}); if(!cs.length) return '';
+      return '<div class="grp"><h4>'+g[1]+'</h4><div class="cols">'+cs.map(function(c){
+        return '<button class="colbtn" data-col="'+c.id+'" aria-pressed="'+(state.col===c)+'"><span class="cv" style="background-image:url(\''+cover(c)+'\')"></span><span class="tx"><b>'+esc(c.title)+'</b><span>'+(c.status==='review'?'<i class="dot"></i>':'')+esc(c.date)+' · '+summary(c)+'</span></span></button>';
+      }).join('')+'</div></div>';
     }).join('');
+    p.innerHTML='<button class="ptoggle" id="ptoggle"></button>'+html;
+    setToggle();
   }
+  function setToggle(){var p=$('picker'),t=$('ptoggle'); t.textContent=p.classList.contains('collapsed')?'▸ แสดงชุดทั้งหมด ('+C.length+' ชุด)':'▾ ชุดทั้งหมด ('+C.length+' ชุด) — กดเพื่อซ่อน';}
   function renderHead(){
-    var c=state.col;
-    $('chead').innerHTML = '<h2>'+esc(c.title)+'</h2><div class="meta">'+st(c.status)+'<span>ส่งรีวิว '+esc(c.date)+'</span><span>·</span><span>'+c.items.length+' ตอน (ภาพ + คลิป + แคปชั่น)</span></div><p>'+esc(c.desc)+'</p>';
+    var c=state.col, hasCaps=c.captions&&c.captions.length;
+    $('chead').innerHTML='<h2>'+esc(c.title)+'</h2><div class="meta">'+st(c.status)+'<span>'+esc(c.date)+'</span><span>·</span><span>'+summary(c)+'</span></div><p>'+esc(c.desc)+'</p>'+(hasCaps?'<button class="capbtn" id="capbtn">ดูแคปชั่นของชุดนี้</button>':'');
+  }
+  function views(c){
+    var v=nV(c), i=nI(c), n=c.items.length, out=[];
+    if(v && i && (v<n || i<n)) out.push(['all','ทั้งหมด']);
+    if(v) out.push(['video','คลิป']);
+    if(i) out.push(['image','ภาพ']);
+    return out;
   }
   function renderGrid(){
-    var c=state.col, v=state.view, g=$('grid');
-    g.className='grid '+v;
-    document.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed', b.dataset.view===v?'true':'false')});
-    $('count').textContent = c.items.length+' '+(v==='reels'?'คลิป':'ภาพ');
-    g.innerHTML = c.items.map(function(it,i){
-      var src = c.base+(v==='reels'?it.poster:it.img);
-      return '<button class="card" data-i="'+i+'"><div class="thumb"><img loading="lazy" src="'+src+'" alt=""><span class="ep">EP.'+pad(it.ep)+'</span>'+(v==='reels'?'<span class="play"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span>':'')+'</div><div class="t">'+esc(it.title)+'</div></button>';
-    }).join('') || '<div class="empty">ยังไม่มีรายการ</div>';
+    var c=state.col, vs=views(c);
+    if(!vs.some(function(x){return x[0]===state.view})) state.view=vs[0][0];
+    $('seg').style.display=vs.length>1?'':'none';
+    $('seg').innerHTML=vs.map(function(x){return '<button data-view="'+x[0]+'" aria-pressed="'+(x[0]===state.view)+'">'+x[1]+'</button>'}).join('');
+    var v=state.view;
+    state.list=c.items.filter(function(it){return v==='all'||(v==='video'?it.video:it.img)});
+    var useVid=function(it){return v==='video'||(v==='all'&&it.video)};
+    var allTall=state.list.every(function(it){return useVid(it)||ratioNum(it.ratio)<0.9});
+    $('grid').className='grid'+(allTall?' narrow':'');
+    $('count').textContent=state.list.length+' รายการ';
+    $('grid').innerHTML=state.list.map(function(it,i){
+      var vid=useVid(it), src=c.base+(vid?it.poster:(it.thumb||it.img)), r=vid?'9/16':(it.imgRatio||it.ratio);
+      return '<button class="card" data-i="'+i+'"><div class="thumb" style="aspect-ratio:'+r+'"><img loading="lazy" src="'+src+'" alt=""><span class="ep">'+esc(it.label)+'</span>'+(vid?'<span class="play"><svg viewBox="0 0 10 12"><path d="M0 0l10 6-10 6z"/></svg></span>':'')+'</div><div class="t">'+esc(it.title)+'</div></button>';
+    }).join('')||'<div class="empty">ยังไม่มีรายการ</div>';
   }
+  function ratioNum(r){var p=String(r||'1/1').split('/');return (+p[0])/(+p[1]||1)}
 
-  function capPanel(kind,label,text){
-    return '<div class="panel cap"><h3><span class="chips"><span class="chip '+kind+'">'+label+'</span>แคปชั่น</span><button class="copy" data-copy="'+kind+'">คัดลอก</button></h3><pre id="cap-'+kind+'">'+esc(text)+'</pre></div>';
+  function textPanel(kind,label,text,id){
+    return '<div class="panel cap"><h3><span class="chips"><span class="chip '+kind+'">'+label[0]+'</span><span class="lb">'+esc(label[1]||'')+'</span></span><button class="copy" data-copy="'+id+'">คัดลอก</button></h3><pre id="'+id+'">'+esc(text)+'</pre></div>';
   }
-  function openItem(i, push){
-    var c=state.col, it=c.items[i]; if(!it) return;
-    state.idx=i;
-    $('mttl').innerHTML='<small>EP.'+pad(it.ep)+'</small>'+esc(it.title);
-    $('mprev').disabled = i===0; $('mnext').disabled = i===c.items.length-1;
-    $('mbody').innerHTML =
-      '<div class="media">'+
-        '<div class="panel"><h3>คลิป Reels 9:16</h3><div class="vid"><video controls playsinline preload="metadata" poster="'+c.base+it.poster+'" src="'+c.base+it.video+'"></video></div><div class="fname">'+esc(it.file_vid)+'</div></div>'+
-        '<div class="panel"><h3>ภาพโพสต์ 4:5</h3><a href="'+c.base+it.img+'" target="_blank" rel="noopener"><img src="'+c.base+it.img+'" alt="ภาพโพสต์ EP.'+pad(it.ep)+'"></a><div class="fname">'+esc(it.file_img)+'</div></div>'+
-      '</div>'+
-      '<div class="caps">'+capPanel('fb','Facebook',it.fb)+capPanel('tt','TikTok',it.tt)+'</div>'+
-      '<div class="hint">ใช้ปุ่ม ‹ › ด้านบน หรือปุ่มลูกศรบนคีย์บอร์ด เพื่อดูตอนถัดไป · คัดลอกลิงก์หน้านี้ส่งในกลุ่มได้</div>';
-    var m=$('modal'); if(!m.classList.contains('open')){m.classList.add('open'); document.body.style.overflow='hidden';}
-    m.scrollTop=0;
-    var h='#'+c.id+'/ep'+pad(it.ep);
+  function collCaps(c){
+    return (c.captions||[]).map(function(s,j){
+      var kind=/tiktok/i.test(s.label)?'tt':'fb'; var nm=kind==='tt'?'TikTok':'Facebook';
+      var rest=s.label.replace(/^(FACEBOOK|TIKTOK)\s*/i,'').replace(/^[—\-–]\s*/,'');
+      return textPanel(kind,[nm,rest],s.text,'cc'+j);
+    }).join('');
+  }
+  function openItem(i,push){
+    var c=state.col, it=state.list[i]; if(!it) return;
+    state.idx=i; state.caps=false;
+    $('mttl').innerHTML='<small>'+esc(it.label)+'</small>'+esc(it.title);
+    $('mprev').disabled=i===0; $('mnext').disabled=i===state.list.length-1;
+    $('mprev').style.visibility=$('mnext').style.visibility='';
+    var media=[];
+    if(it.video) media.push('<div class="panel"><h3>คลิป 9:16</h3><div class="vid"><video controls playsinline preload="metadata" poster="'+c.base+it.poster+'" src="'+c.base+it.video+'"></video></div><div class="fname">'+esc(it.file)+'</div></div>');
+    if(it.img) media.push('<div class="panel"><h3>ภาพ<a class="copy" href="'+c.base+it.img+'" target="_blank" rel="noopener">เปิดภาพเต็ม</a></h3><a href="'+c.base+it.img+'" target="_blank" rel="noopener"><img src="'+c.base+it.img+'" alt="'+esc(it.title)+'"></a><div class="fname">'+esc(it.fileImg)+'</div></div>');
+    var side='';
+    if(it.fb) side+=textPanel('fb',['Facebook','แคปชั่น'],it.fb,'cfb');
+    if(it.tt) side+=textPanel('tt',['TikTok','แคปชั่น'],it.tt,'ctt');
+    if(!it.fb && !it.tt) side+=collCaps(c);
+    if(it.script) side+=textPanel('sc',['สคริปต์พากย์',''],it.script,'csc');
+    var b=$('mbody');
+    b.className='mbody'+(side?'':' solo');
+    b.innerHTML='<div class="media'+(media.length>1?' two':'')+'">'+media.join('')+'</div>'+(side?'<div class="side">'+side+'</div>':'')+
+      '<div class="hint">ใช้ปุ่ม ‹ › ด้านบน หรือปุ่มลูกศรบนคีย์บอร์ด เพื่อดูชิ้นถัดไป · คัดลอกลิงก์หน้านี้ส่งในกลุ่มได้</div>';
+    show();
+    var h='#'+c.id+'/'+it.k;
     if(location.hash!==h) history[push?'pushState':'replaceState'](null,'',h);
   }
+  function openCaps(){
+    var c=state.col; state.caps=true; state.idx=-1;
+    $('mttl').innerHTML='<small>แคปชั่น</small>'+esc(c.title);
+    $('mprev').style.visibility=$('mnext').style.visibility='hidden';
+    var b=$('mbody'); b.className='mbody solo'; b.innerHTML='<div class="side">'+collCaps(c)+'</div>';
+    show();
+  }
+  function show(){var m=$('modal'); if(!m.classList.contains('open')){m.classList.add('open');document.body.style.overflow='hidden';} m.scrollTop=0;}
   function closeModal(){
     var m=$('modal'); m.classList.remove('open'); document.body.style.overflow='';
     var v=m.querySelector('video'); if(v) v.pause();
-    $('mbody').innerHTML=''; state.idx=-1;
-    if(location.hash.indexOf('/ep')>-1) history.replaceState(null,'','#'+state.col.id);
+    $('mbody').innerHTML=''; state.idx=-1; state.caps=false;
+    if(state.col && location.hash.indexOf('/')>-1) history.replaceState(null,'','#'+state.col.id);
   }
-  function setCol(c){ state.col=c; renderCols(); renderHead(); renderGrid(); }
+  function setCol(c,keepView){ state.col=c; if(!keepView) state.view=null; renderPicker(); renderHead(); renderGrid(); }
 
   function route(){
-    var m=location.hash.match(/^#([\w-]+)(?:\/ep(\d+))?/);
-    var c = (m && C.filter(function(x){return x.id===m[1]})[0]) || C[0];
+    var m=location.hash.match(/^#([\w-]+)(?:\/([\w-]+))?/);
+    var c=(m && C.filter(function(x){return x.id===m[1]})[0]) || C[0];
     if(!c){ $('grid').innerHTML='<div class="empty">ยังไม่มีชุดคอนเทนต์</div>'; return; }
     if(state.col!==c) setCol(c);
     if(m && m[2]){
-      var n=parseInt(m[2],10), i=c.items.findIndex(function(x){return x.ep===n});
+      var i=state.list.findIndex(function(x){return x.k===m[2]});
+      if(i<0){ state.view='all'; renderGrid(); i=state.list.findIndex(function(x){return x.k===m[2]}); }
+      if(i<0){ state.view=null; renderGrid(); i=state.list.findIndex(function(x){return x.k===m[2]}); }
       if(i>-1){ openItem(i,false); return; }
     }
     if($('modal').classList.contains('open')) closeModal();
@@ -228,11 +277,13 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
 
   document.addEventListener('click',function(e){
     var t;
-    if((t=e.target.closest('.colbtn'))){ var c=C.filter(function(x){return x.id===t.dataset.col})[0]; history.pushState(null,'','#'+c.id); setCol(c); return; }
+    if((t=e.target.closest('#ptoggle'))){ $('picker').classList.toggle('collapsed'); setToggle(); return; }
+    if((t=e.target.closest('.colbtn'))){ var c=C.filter(function(x){return x.id===t.dataset.col})[0]; history.pushState(null,'','#'+c.id); setCol(c); if(window.innerWidth<700){$('picker').classList.add('collapsed');setToggle();} $('chead').scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    if((t=e.target.closest('#capbtn'))){ openCaps(); return; }
     if((t=e.target.closest('.seg button'))){ state.view=t.dataset.view; renderGrid(); return; }
     if((t=e.target.closest('.card'))){ openItem(+t.dataset.i,true); return; }
-    if((t=e.target.closest('.copy'))){
-      var txt=$('cap-'+t.dataset.copy).textContent;
+    if((t=e.target.closest('button.copy'))){
+      var txt=$(t.dataset.copy).textContent;
       var done=function(){t.textContent='คัดลอกแล้ว ✓'; t.classList.add('done'); setTimeout(function(){t.textContent='คัดลอก'; t.classList.remove('done')},1800)};
       if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(txt).then(done,function(){fallback(txt);done()}); } else { fallback(txt); done(); }
       return;
@@ -246,10 +297,12 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
   document.addEventListener('keydown',function(e){
     if(!$('modal').classList.contains('open')) return;
     if(e.key==='Escape') closeModal();
+    else if(state.caps) return;
     else if(e.key==='ArrowLeft' && state.idx>0) openItem(state.idx-1,false);
-    else if(e.key==='ArrowRight' && state.idx<state.col.items.length-1) openItem(state.idx+1,false);
+    else if(e.key==='ArrowRight' && state.idx<state.list.length-1) openItem(state.idx+1,false);
   });
   window.addEventListener('popstate',route);
+  if(window.innerWidth<700 && /\/[\w-]+$/.test(location.hash)) $('picker').classList.add('collapsed');
   route();
 })();
 </script>
