@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>TNS Solar · ห้องรีวิวสื่อ</title>
+<title>TNS Solar System · รวมข้อมูล</title>
+<meta name="description" content="รวมข้อมูล TNS Solar System: แพ็กเกจโซลาร์เซลล์ ผลงานติดตั้ง คลิป และความรู้เรื่องโซลาร์">
 <style>
 @font-face{font-family:'Prompt';font-style:normal;font-weight:300;font-display:block;src:url('fonts/prompt-thai-300.woff2') format('woff2');unicode-range:U+0E01-0E5B,U+200C-200D,U+25CC}
 @font-face{font-family:'Prompt';font-style:normal;font-weight:300;font-display:block;src:url('fonts/prompt-latin-300.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD,U+2080-2089,U+2190-21FF,U+2248,U+00D7,U+00F7,U+2264-2265}
@@ -33,7 +34,7 @@ img,video{display:block;max-width:100%}
 .top-in{max-width:1180px;margin:0 auto;padding:18px 16px 26px;position:relative;z-index:1}
 .brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand img{height:44px;width:auto}
-.brand .tag{font-size:12px;font-weight:500;letter-spacing:.04em;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.brand .tag{text-decoration:none;color:#fff;font-size:12px;font-weight:500;letter-spacing:.04em;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:4px 10px;border-radius:999px;white-space:nowrap}
 .top h1{font-size:clamp(22px,4.6vw,32px);font-weight:600;margin-top:18px;line-height:1.25}
 .top p{color:rgba(255,255,255,.78);font-size:14px;margin-top:4px;font-weight:300}
 
@@ -119,6 +120,14 @@ img,video{display:block;max-width:100%}
 @media(min-width:900px){.hint{grid-column:1/-1}}
 
 footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:var(--muted)}
+.contact{background:var(--navy);color:#fff;border-radius:var(--radius);padding:18px;display:grid;gap:14px}
+@media(min-width:900px){.contact{grid-template-columns:1fr 2.2fr;align-items:center}}
+.contact b{display:block;font-size:15px;font-weight:600}
+.contact span{display:block;font-size:12px;color:rgba(255,255,255,.72)}
+.contact .ph{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.contact .ph a{text-decoration:none;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
+.contact .ph a b{font-size:17px}
+.fine{margin-top:10px;text-align:center}
 .empty{padding:40px;text-align:center;color:var(--muted)}
 </style>
 </head>
@@ -127,10 +136,10 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
   <div class="top-in">
     <div class="brand">
       <img src="logo.png" alt="TNS Solar System">
-      <span class="tag">สำหรับทีมภายใน</span>
+      <a class="tag" href="https://www.tnsnetwork.co.th" target="_blank" rel="noopener">www.tnsnetwork.co.th</a>
     </div>
-    <h1>ห้องรีวิวสื่อก่อนโพสต์</h1>
-    <p>ดูภาพ คลิป และแคปชั่นที่เตรียมไว้ ก่อนลง Facebook / TikTok จริง</p>
+    <h1>รวมข้อมูล TNS Solar System</h1>
+    <p>แพ็กเกจโซลาร์เซลล์ ผลงานติดตั้ง คลิป และความรู้เรื่องโซลาร์ ในที่เดียว</p>
   </div>
 </header>
 
@@ -143,7 +152,18 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
   </div>
   <div class="grid" id="grid"></div>
 </main>
-<footer>คลิปบนเว็บเป็นไฟล์ย่อขนาด (720p) และภาพย่อขนาดสำหรับดูตัวอย่าง · ไฟล์เต็มสำหรับโพสต์/พิมพ์จริงอยู่ในโฟลเดอร์ TNS Solar บนเครื่อง Windows</footer>
+<footer>
+  <div class="contact">
+    <div><b>สอบถามรายละเอียดและขอใบเสนอราคา</b><span>บริษัท ทีเอ็นเอส เน็ทเวิร์ค โซลูชั่น จำกัด (TNS Solar System)</span></div>
+    <div class="ph">
+      <a href="tel:0817964999"><b>081 796 4999</b><span>กรุงเทพฯ · นนทบุรี · สมุทรปราการ (กฟน.)</span></a>
+      <a href="tel:0652955998"><b>065 295 5998</b><span>ชลบุรี · ภาคกลาง · ภาคตะวันออกเฉียงเหนือ (กฟภ.)</span></a>
+      <a href="tel:0873043724"><b>087 304 3724</b><span>เชียงใหม่ · ภาคเหนือ (กฟภ.)</span></a>
+      <a href="https://line.me/R/ti/p/@tnssolar" target="_blank" rel="noopener"><b>LINE @tnssolar</b><span>ทักไลน์สอบถามได้เลย</span></a>
+    </div>
+  </div>
+  <p class="fine">ราคาและเงื่อนไขอาจเปลี่ยนแปลงได้ โปรดตรวจสอบกับทีมงานก่อนตัดสินใจ</p>
+</footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mttl">
   <div class="sheet">
@@ -162,7 +182,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
 (function(){
   var C = window.COLLECTIONS || [];
   var STATUS = {review:'รอรีวิว', approved:'อนุมัติแล้ว', posted:'โพสต์แล้ว', archive:'คลังสื่อ'};
-  var GROUPS = [['video','วิดีโอ'],['post','โพสต์โซเชียล'],['print','โบรชัวร์ & ป้าย']];
+  var GROUPS = [['video','วิดีโอ'],['post','ภาพประชาสัมพันธ์'],['print','แพ็กเกจ & ป้าย']];
   var state = {col:null, view:null, list:[], idx:-1, caps:false};
   var $ = function(id){return document.getElementById(id)};
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -177,7 +197,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
     var html=GROUPS.map(function(g){
       var cs=C.filter(function(c){return (c.group||'post')===g[0]}); if(!cs.length) return '';
       return '<div class="grp"><h4>'+g[1]+'</h4><div class="cols">'+cs.map(function(c){
-        return '<button class="colbtn" data-col="'+c.id+'" aria-pressed="'+(state.col===c)+'"><span class="cv" style="background-image:url(\''+cover(c)+'\')"></span><span class="tx"><b>'+esc(c.title)+'</b><span>'+(c.status==='review'?'<i class="dot"></i>':'')+esc(c.date)+' · '+summary(c)+'</span></span></button>';
+        return '<button class="colbtn" data-col="'+c.id+'" aria-pressed="'+(state.col===c)+'"><span class="cv" style="background-image:url(\''+cover(c)+'\')"></span><span class="tx"><b>'+esc(c.title)+'</b><span>'+esc(c.date)+' · '+summary(c)+'</span></span></button>';
       }).join('')+'</div></div>';
     }).join('');
     p.innerHTML='<button class="ptoggle" id="ptoggle"></button>'+html;
@@ -186,7 +206,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
   function setToggle(){var p=$('picker'),t=$('ptoggle'); t.textContent=p.classList.contains('collapsed')?'▸ แสดงชุดทั้งหมด ('+C.length+' ชุด)':'▾ ชุดทั้งหมด ('+C.length+' ชุด) — กดเพื่อซ่อน';}
   function renderHead(){
     var c=state.col, hasCaps=c.captions&&c.captions.length;
-    $('chead').innerHTML='<h2>'+esc(c.title)+'</h2><div class="meta">'+st(c.status)+'<span>'+esc(c.date)+'</span><span>·</span><span>'+summary(c)+'</span></div><p>'+esc(c.desc)+'</p>'+(hasCaps?'<button class="capbtn" id="capbtn">ดูแคปชั่นของชุดนี้</button>':'');
+    $('chead').innerHTML='<h2>'+esc(c.title)+'</h2><div class="meta"><span>'+esc(c.date)+'</span><span>·</span><span>'+summary(c)+'</span></div><p>'+esc(c.desc)+'</p>'+(hasCaps?'<button class="capbtn" id="capbtn">ดูข้อความประกอบ</button>':'');
   }
   function views(c){
     var v=nV(c), i=nI(c), n=c.items.length, out=[];
@@ -240,7 +260,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
     var b=$('mbody');
     b.className='mbody'+(side?'':' solo');
     b.innerHTML='<div class="media'+(media.length>1?' two':'')+'">'+media.join('')+'</div>'+(side?'<div class="side">'+side+'</div>':'')+
-      '<div class="hint">ใช้ปุ่ม ‹ › ด้านบน หรือปุ่มลูกศรบนคีย์บอร์ด เพื่อดูชิ้นถัดไป · คัดลอกลิงก์หน้านี้ส่งในกลุ่มได้</div>';
+      '<div class="hint">ใช้ปุ่ม ‹ › ด้านบน หรือปุ่มลูกศรบนคีย์บอร์ด เพื่อดูชิ้นถัดไป · แชร์ลิงก์หน้านี้ให้คนอื่นได้</div>';
     show();
     var h='#'+c.id+'/'+it.k;
     if(location.hash!==h) history[push?'pushState':'replaceState'](null,'',h);
