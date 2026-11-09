@@ -182,7 +182,7 @@ footer{max-width:1180px;margin:0 auto;padding:0 16px 40px;font-size:12px;color:v
 (function(){
   var C = window.COLLECTIONS || [];
   var STATUS = {review:'รอรีวิว', approved:'อนุมัติแล้ว', posted:'โพสต์แล้ว', archive:'คลังสื่อ'};
-  var GROUPS = [['news','รายงานข่าวประจำวัน'],['brand','รู้จักแบรนด์'],['video','วิดีโอ'],['post','ภาพประชาสัมพันธ์'],['print','แพ็กเกจ & ป้าย']];
+  var GROUPS = [['work','รวมผลงาน'],['news','รายงานข่าวประจำวัน'],['brand','รู้จักแบรนด์'],['video','วิดีโอ'],['post','ภาพประชาสัมพันธ์'],['print','แพ็กเกจ & ป้าย']];
   var state = {col:null, view:null, list:[], idx:-1, caps:false};
   var $ = function(id){return document.getElementById(id)};
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
