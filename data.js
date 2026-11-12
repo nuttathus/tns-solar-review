@@ -16,7 +16,7 @@ window.COLLECTIONS = [
     "k": "b1",
     "video": "v/b1.mp4",
     "poster": "p/b1.jpg",
-    "file": "TNS-Battery_7kWh_VO.mp4",
+    "file": "TNS-Battery_7kWh_VO_v2.mp4",
     "imgRatio": "1080/1350",
     "label": "01",
     "title": "แบต 7 kWh เปิดอะไรได้กี่ชั่วโมง",
